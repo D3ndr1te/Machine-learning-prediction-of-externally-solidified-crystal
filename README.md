@@ -1,38 +1,60 @@
-# Machine-learning-prediction-of-externally-solidified-crystal
-
 # ESC Prediction in Aluminum Die Casting — Machine Learning Framework
 
-This repository contains the machine learning code used in the paper:
+This repository contains the machine learning code and processed dataset used in the paper:
 
 **“Machine Learning Prediction of Externally Solidified Crystal Formation in Aluminum Die Casting”**
 
 The notebook reproduces model training, hyperparameter tuning, cross-validated evaluation, and SHAP-based feature importance analysis.
 
+Full methodological details are described in the paper.
+
+---
+
+## Repository Structure
+
+```
+Cleaned_ML_MechanicalProperties_melt.csv
+ESC_Casting_Notes.xlsx
+Machine_learning_prediction_of_externally_solidified_crystal_formation_...
+README.md
+```
+
+### Files
+
+**Cleaned_ML_MechanicalProperties_melt.csv**  
+Processed dataset used directly for machine learning modeling.
+
+**ESC_Casting_Notes.xlsx**  
+Original casting dataset before preprocessing.  
+Provided for transparency and for researchers interested in alternative data processing workflows.
+
+**Machine_learning_prediction_of_externally_solidified_crystal_formation_…**  
+Main Jupyter notebook (exported from Google Colab) containing all ML pipelines and analysis.
+
+**README.md**  
+Repository documentation.
+
 ---
 
 ## Usage
 
-1. Prepare a dataset as a pandas DataFrame named:
+1. Load the cleaned dataset:
 
 ```
+Cleaned_ML_MechanicalProperties_melt.csv
+```
+
+as a pandas DataFrame named:
+
+```python
 full_df
 ```
 
-with a binary target column:
+2. Open the notebook and run cells sequentially:
 
 ```
-%esc
+Machine_learning_prediction_of_externally_solidified_crystal_formation_…
 ```
-
-All remaining numeric columns are treated as predictor features.
-
-2. Open and run the notebook:
-
-```
-Machine_learning_prediction_of_externally_solidified_crystal_formation_in_aluminum_die_casting_process.ipynb
-```
-
-3. Execute cells sequentially.
 
 Each model block (MLP, SVM, KNN, Naive Bayes) is independent.
 
@@ -46,7 +68,7 @@ Each model block (MLP, SVM, KNN, Naive Bayes) is independent.
 - Confusion matrices
 - SHAP global feature importance
 
-Full methodological details are provided in the paper.
+See the paper for full methodology.
 
 ---
 
